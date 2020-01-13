@@ -31,7 +31,7 @@ public class Shoe {
     }
 
     public void setBrand(String brand) {
-        List<String> validBrands = Arrays.asList("Nike","Addidas","Li-ning","Reebox","Under Armour","Fox");
+        List<String> validBrands = Arrays.asList("Nike","Adidas","Li-ning","Reebox","Under Armour","Fox");
         if (validBrands.contains(brand))
             this.brand = brand;
         else
@@ -58,5 +58,10 @@ public class Shoe {
             this.price = price;
         else
             throw new IllegalArgumentException("price must be greater than 0");
+    }
+
+    public String toString()
+    {
+        return String.format("%s %s", colour, brand);
     }
 }
