@@ -47,10 +47,16 @@ public class Shoe {
     }
 
     public void setGender(String gender) {
-        this.gender = gender;
+        if (gender.equalsIgnoreCase("male") || gender.equalsIgnoreCase("female"))
+            this.gender = gender;
+        else
+            throw new IllegalArgumentException("gender must be male or female");
     }
 
     public void setPrice(double price) {
-        this.price = price;
+        if (price >=0)
+            this.price = price;
+        else
+            throw new IllegalArgumentException("price must be greater than 0");
     }
 }
