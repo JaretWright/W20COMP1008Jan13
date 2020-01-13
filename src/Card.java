@@ -31,6 +31,7 @@ public class Card {
     {
         return Arrays.asList("hearts","diamonds","spades","clubs");
     }
+
     /**
      * This method will validate that argument is hearts, spades, diamonds or clubs and set
      * the instance variable
@@ -46,6 +47,10 @@ public class Card {
             throw new IllegalArgumentException("valid suits are hearts, diamonds,clubs or spades");
     }
 
+    public String toString()
+    {
+        return String.format("%s of %s", faceName, suit);
+    }
     public String getFaceName() {
         return faceName;
     }
